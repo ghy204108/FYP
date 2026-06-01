@@ -1,0 +1,68 @@
+project:
+  name: labelwise_uncertainty_profiling_preexperiment
+  seed: 42
+
+data:
+  split_names:
+    train: train
+    profile_val: profile_val
+    test: test
+  labels:
+    - Cardiomegaly
+    - Edema
+    - Consolidation
+    - Atelectasis
+    - Pneumothorax
+    - Pleural Effusion
+  blank_policy: mask
+  row_level_manifests_committed: false
+
+preprocessing:
+  image_size: 224
+  normalize: imagenet
+  frontal_only: true
+
+teacher:
+  backbone: densenet121
+  pretrained: imagenet
+  uncertain_strategy: u_ignore
+  loss: masked_bce
+  batch_size: 32
+  epochs: 5
+  learning_rate: 0.0001
+
+profiling:
+  minimum_positive_support: 100
+  minimum_negative_support: 100
+  max_ece_for_reliable_teacher: 0.15
+  minimum_pn_separability: 0.60
+  high_overlap_threshold: 0.60
+  minimum_effect_size: 0.20
+  relative_distance_margin: 0.20
+
+strategies:
+  u_zero:
+    uncertain_target: 0.0
+    uncertain_mask: 1
+  u_one:
+    uncertain_target: 1.0
+    uncertain_mask: 1
+  u_soft:
+    uncertain_target: 0.5
+    uncertain_mask: 1
+  u_ignore:
+    uncertain_target: null
+    uncertain_mask: 0
+
+evaluation:
+  primary_metrics:
+    - per_label_auprc
+    - macro_auprc
+    - rare_label_auprc
+  secondary_metrics:
+    - auroc
+    - ece
+    - brier
+    - oracle_agreement
+    - regret
+

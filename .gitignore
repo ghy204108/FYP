@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Local environment
+.env
+.env.*
+
+# CheXpert/raw data and row-level manifests
+CheXpert*/
+data/raw/
+data/images/
+data/chexpert_manifest*.csv
+*.dcm
+*.nii
+*.nii.gz
+
+# Model artifacts and experiment outputs
+checkpoints/
+models/
+runs/
+wandb/
+mlruns/
+outputs/
+results/*
+!results/.gitkeep
+!results/README.md
+experiments/*
+!experiments/.gitkeep
+!experiments/README.md
+
+# Temporary/generated documents
+tmp_*/
+render_*/
+*.tmp
+
+# OS/editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
