@@ -9,8 +9,8 @@ CheXpert-style labels before training every candidate final model.
 
 ## Current Scope
 
-The current stage is a small-scale pre-experiment on a CheXpert subset. The
-goal is to verify that the methodology pipeline is feasible:
+The current stage is a small-scale pre-experiment on a CheXpert subset of
+21,982 images. The goal is to verify that the methodology pipeline is feasible:
 
 1. Build a clean label matrix and split-aware manifests.
 2. Train a teacher/probe model with `U-Ignore`.
@@ -24,7 +24,7 @@ goal is to verify that the methodology pipeline is feasible:
 ```text
 .
 ├── configs/                         # Reproducible experiment settings
-├── data/                            # Aggregate summaries only, not raw data
+├── data/                            # Pre-experiment aggregate summaries only
 ├── docs/                            # Protocol notes and methodology records
 ├── experiments/                     # Lightweight experiment logs
 ├── Initial/                         # Early literature and topic analysis
@@ -44,7 +44,7 @@ statistics and reproducible scripts should be committed.
 
 The pre-experiment should produce:
 
-- `data/chexpert_label_summary*.csv`
+- `data/pre_experiment_label_summary.csv`
 - `results/teacher_reliability.csv`
 - `results/profile_features.csv`
 - `results/strategy_mapping.csv`
@@ -54,4 +54,3 @@ The pre-experiment should produce:
 
 This repository is for algorithmic benchmarking and FYP documentation only.
 Model outputs are not clinical diagnoses.
-

@@ -11,7 +11,8 @@ Do not commit:
 
 Allowed examples:
 
-- `chexpert_label_summary.csv`
-- `chexpert_label_summary_frontal.csv`
+- `pre_experiment_label_summary.csv`
 - small manually reviewed label distribution summaries
 
+Full-dataset aggregate summaries are not tracked in this pre-experiment
+repository to avoid confusing them with the current subset experiment.

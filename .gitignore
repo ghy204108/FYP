@@ -18,6 +18,7 @@ CheXpert*/
 data/raw/
 data/images/
 data/chexpert_manifest*.csv
+data/chexpert_label_summary*.csv
 *.dcm
 *.nii
 *.nii.gz

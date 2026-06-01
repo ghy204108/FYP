@@ -1,0 +1,25 @@
+split,label,positive,negative,uncertain,blank,total_images
+all,Cardiomegaly,3702,1761,1473,15046,21982
+all,Edema,5013,3193,1983,11793,21982
+all,Consolidation,2153,3756,4048,12025,21982
+all,Atelectasis,3952,830,4640,12560,21982
+all,Pneumothorax,2213,5439,993,13337,21982
+all,Pleural Effusion,7770,4587,1895,7730,21982
+train,Cardiomegaly,2203,1073,858,9071,13205
+train,Edema,3009,1919,1177,7100,13205
+train,Consolidation,1291,2272,2424,7218,13205
+train,Atelectasis,2399,500,2782,7524,13205
+train,Pneumothorax,1360,3255,600,7990,13205
+train,Pleural Effusion,4679,2763,1126,4637,13205
+profile_val,Cardiomegaly,760,325,306,2986,4377
+profile_val,Edema,1024,645,416,2292,4377
+profile_val,Consolidation,444,725,804,2404,4377
+profile_val,Atelectasis,783,162,932,2500,4377
+profile_val,Pneumothorax,421,1066,192,2698,4377
+profile_val,Pleural Effusion,1525,911,390,1551,4377
+test,Cardiomegaly,739,363,309,2989,4400
+test,Edema,980,629,390,2401,4400
+test,Consolidation,418,759,820,2403,4400
+test,Atelectasis,770,168,926,2536,4400
+test,Pneumothorax,432,1118,201,2649,4400
+test,Pleural Effusion,1566,913,379,1542,4400
