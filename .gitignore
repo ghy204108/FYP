@@ -27,12 +27,20 @@ sampling_quota.csv
 *.nii.gz
 
 # Model artifacts and experiment outputs
+*.pt
+*.pth
 checkpoints/
 models/
 runs/
 wandb/
 mlruns/
 outputs/
+Teacher_model/checkpoints/
+final_models/*/checkpoints/
+Teacher_model/teacher_profile_val_predictions.csv
+Teacher_model/teacher_test_predictions.csv
+final_models/*/profile_val_predictions.csv
+final_models/*/test_predictions.csv
 results/*
 !results/.gitkeep
 !results/README.md
@@ -44,6 +52,8 @@ experiments/*
 tmp_*/
 render_*/
 *.tmp
+docs/github_upload_notes.md
+docs/pre_experiment_protocol_cn.md
 
 # Private/local writing drafts and course notes
 Initial/
