@@ -41,10 +41,17 @@ tmp_*/
 render_*/
 *.tmp
 
+# Private/local writing drafts and course notes
+Initial/
+agent.md
+FYP_Proposal*.md
+improved_proposal.md
+proposal_change_log_and_weak_areas_cn.md
+revised_fyp_proposal_form_cn.md
+
 # OS/editor
 .DS_Store
 Thumbs.db
 desktop.ini
 .vscode/
 .idea/
-
