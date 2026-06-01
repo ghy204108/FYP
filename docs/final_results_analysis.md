@@ -53,6 +53,18 @@ Several Type A labels were mapped to U-One because their uncertain distributions
 
 Pneumothorax also needs further analysis. It was mapped to Type C / U-Soft because uncertain samples overlapped both positive and negative distributions, but the experiment did not include an all U-Soft baseline. This makes it difficult to isolate whether the U-Soft decision itself was weak or whether interaction with the other profile-guided label strategies affected performance.
 
+## Possible Explanations for the Mixed Result
+
+The current result should not be read as a rejection of label-wise profiling. It is better interpreted as evidence that the first version of the decision rules is not yet sufficient to beat a strong conservative baseline.
+
+One likely reason is that teacher-score similarity and training-label usefulness are related but not identical. The profile uses the teacher to ask whether uncertain samples look closer to positive or negative samples in prediction space. The final model, however, is affected by how those uncertain samples act as supervision. An uncertain sample may look positive-like while still being noisy as a hard positive training target. This helps explain why several Type A labels did not outperform U-Ignore in the final comparison.
+
+The pilot subset may also contribute to the result. The experiment uses a reduced frontal-only subset for feasibility. This is enough to test the pipeline, but it limits the stability of teacher estimates and final model training, particularly for labels with low negative or uncertain support. Atelectasis has few negative samples, and Pneumothorax has limited uncertain samples, so both labels are more vulnerable to sampling variation.
+
+The shared multi-label training setup is another factor. The profile-guided strategy assigns different treatments to different labels, but the final model uses a shared backbone. Strategy choices can therefore interact through shared feature learning. A label-wise rule that looks reasonable in isolation may behave differently once trained jointly with other labels.
+
+Finally, the experiment uses one split and one seed. The gap between U-Ignore and profile-guided is small at the macro level, so additional seeds are needed before making a strong claim about strategy superiority. In this pilot, the safer conclusion is that profile-guided handling gives useful diagnostic evidence and avoids the weakest baseline, but U-Ignore remains the strongest empirical strategy under the current setting.
+
 ## Current Conclusion
 
 The current pilot supports a cautious conclusion:

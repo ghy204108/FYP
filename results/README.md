@@ -107,6 +107,18 @@ The profile-guided method is not simply random: it avoids the weakest fixed stra
 
 The main methodological lesson is that teacher-score distribution similarity should be treated as evidence, not as a final decision by itself. A label can look positive-like in score space while still benefiting from U-Ignore during final training. The reliability gate appears valuable, but the Type A rule likely needs to become more conservative.
 
+## Why the Profile-guided Result May Be Weaker Than U-Ignore
+
+Several factors may explain why the profile-guided model did not beat U-Ignore in this pilot.
+
+First, the pilot subset is deliberately reduced. The teacher and final models were trained on a frontal-only subset rather than the full CheXpert training set. This makes the experiment feasible, but it also means the teacher score distributions and final model behavior may be less stable, especially for labels with limited negative or uncertain support.
+
+Second, the current profile rules assume that if uncertain samples look close to positives in teacher-score space, they can be treated as hard positives. The final results suggest that this is too aggressive. Positive-like uncertain samples may still contain report noise, weak evidence, or borderline cases. U-Ignore may lose some useful supervision, but it also avoids writing noisy labels into the final model.
+
+Third, the experiment used a single split and a single training seed. The gap between U-Ignore and profile-guided is small, around 0.0055 macro AUPRC, so part of the difference may come from sampling and optimization variability.
+
+Finally, U-Ignore is a strong baseline for report-derived medical labels. Its advantage in this pilot is not only AUPRC, but also calibration: it has the best Brier score and ECE. This suggests that conservative handling of uncertain labels can produce more reliable probabilities in the current setting.
+
 ## Next Steps
 
 The next experiment should:
