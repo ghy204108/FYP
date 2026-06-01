@@ -35,9 +35,9 @@ runs/
 wandb/
 mlruns/
 outputs/
-Teacher_model/
-final_models/
-uncertainty_profile/
+/Teacher_model/
+/final_models/
+/uncertainty_profile/
 results/**/checkpoints/
 results/**/*predictions.csv
 experiments/*
