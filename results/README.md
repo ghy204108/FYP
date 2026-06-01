@@ -1,13 +1,21 @@
 # Results
 
-Commit only small CSV/Markdown summaries needed for the FYP report.
+This directory contains the small result tables and stage-level notes from the current pilot experiment.
 
-Recommended result files:
+```text
+teacher_model/
+  README.md
+  teacher_reliability_profile_val.csv
 
-- `teacher_reliability.csv`
-- `profile_features.csv`
-- `strategy_mapping.csv`
-- `final_results.csv`
+uncertainty_profile/
+  README.md
+  profile_features.csv
+  strategy_mapping.csv
 
-Do not commit checkpoints, prediction dumps or large intermediate arrays.
+final_models/
+  README.md
+  final_results_summary.csv
+  final_results_per_label.csv
+```
 
+The committed files are intentionally lightweight. Model checkpoints, per-image prediction dumps, raw CheXpert images, and row-level manifests with local paths are kept out of Git.

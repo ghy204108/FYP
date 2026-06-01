@@ -41,10 +41,10 @@ The teacher is not treated as a diagnostic model or ground truth source. It is u
 Main outputs:
 
 ```text
-Teacher_model/teacher_reliability_profile_val.csv
-Teacher_model/teacher_profile_val_predictions.csv
-Teacher_model/teacher_test_predictions.csv
-Teacher_model/checkpoints/best_teacher.pt
+results/teacher_model/teacher_reliability_profile_val.csv
+results/teacher_model/teacher_profile_val_predictions.csv       # local only
+results/teacher_model/teacher_test_predictions.csv              # local only
+results/teacher_model/checkpoints/best_teacher.pt               # local only
 ```
 
 Only the small reliability table is recommended for GitHub. The checkpoint and per-image prediction dumps are reproducible artifacts and can be kept local.
@@ -78,8 +78,8 @@ The result is a Type A-D assignment:
 Main outputs:
 
 ```text
-uncertainty_profile/profile_features.csv
-uncertainty_profile/strategy_mapping.csv
+results/uncertainty_profile/profile_features.csv
+results/uncertainty_profile/strategy_mapping.csv
 ```
 
 ## 4. Final Model Comparison
@@ -98,8 +98,8 @@ During final-model evaluation, only definite positive and definite negative labe
 Main outputs:
 
 ```text
-final_models/final_results_summary.csv
-final_models/final_results_per_label.csv
+results/final_models/final_results_summary.csv
+results/final_models/final_results_per_label.csv
 ```
 
 ## 5. Current Interpretation

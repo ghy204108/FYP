@@ -26,9 +26,9 @@ TEST_MANIFEST_PATH = r"E:\2026.04\Thesis\CheXpert Dataset\archive\subset_test.cs
 
 IMAGE_ROOT = r"E:\2026.04\Thesis\CheXpert Dataset\archive"
 
-STRATEGY_MAPPING_PATH = r"D:\Codex\CodexProjects\FYP\uncertainty_profile\strategy_mapping.csv"
+STRATEGY_MAPPING_PATH = r"D:\Codex\CodexProjects\FYP\results\uncertainty_profile\strategy_mapping.csv"
 
-OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\final_models")
+OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\results\final_models")
 
 LABELS = [
     "Cardiomegaly",

@@ -100,17 +100,23 @@ docs/
   teacher_model_analysis.md        # Teacher/probe analysis
   uncertainty_profile_analysis.md  # Type A-D profiling result
   final_results_analysis.md        # Final model comparison
-  github_upload_notes.md           # What should/should not be uploaded
 scripts/
   initial_analysis/                # Dataset preparation scripts
-Teacher_model/
-  teacher_reliability_profile_val.csv
-uncertainty_profile/
-  profile_features.csv
-  strategy_mapping.csv
-final_models/
-  final_results_summary.csv
-  final_results_per_label.csv
+  train_teacher.py
+  build_uncertainty_profile.py
+  train_final_models.py
+results/
+  teacher_model/
+    README.md
+    teacher_reliability_profile_val.csv
+  uncertainty_profile/
+    README.md
+    profile_features.csv
+    strategy_mapping.csv
+  final_models/
+    README.md
+    final_results_summary.csv
+    final_results_per_label.csv
 ```
 
 Raw CheXpert images, local row-level manifests with private paths, model checkpoints, and per-image prediction dumps should not be committed unless explicitly intended.

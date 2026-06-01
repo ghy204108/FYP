@@ -9,10 +9,10 @@ from scipy.stats import wasserstein_distance, mannwhitneyu
 # Config
 # =========================
 
-PRED_PATH = Path(r"D:\Codex\CodexProjects\FYP\Teacher_model\teacher_profile_val_predictions.csv")
-RELIABILITY_PATH = Path(r"D:\Codex\CodexProjects\FYP\Teacher_model\teacher_reliability_profile_val.csv")
+PRED_PATH = Path(r"D:\Codex\CodexProjects\FYP\results\teacher_model\teacher_profile_val_predictions.csv")
+RELIABILITY_PATH = Path(r"D:\Codex\CodexProjects\FYP\results\teacher_model\teacher_reliability_profile_val.csv")
 
-OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\uncertainty_profile")
+OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\results\uncertainty_profile")
 PROFILE_FEATURES_OUT = OUT_DIR / "profile_features.csv"
 STRATEGY_MAPPING_OUT = OUT_DIR / "strategy_mapping.csv"
 

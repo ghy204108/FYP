@@ -27,7 +27,7 @@ TEST_MANIFEST_PATH = r"E:\2026.04\Thesis\CheXpert Dataset\archive\subset_test.cs
 # Your real CheXpert image root. If paths in CSV are relative, they will be joined with this root.
 IMAGE_ROOT = r"E:\2026.04\Thesis\CheXpert Dataset\archive"
 
-OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\Teacher_model")
+OUT_DIR = Path(r"D:\Codex\CodexProjects\FYP\results\teacher_model")
 
 LABELS = [
     "Cardiomegaly",
