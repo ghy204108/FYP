@@ -27,11 +27,10 @@ The current stage is a small-scale pre-experiment on a CheXpert subset of
 ├── data/                            # Pre-experiment aggregate summaries only
 ├── docs/                            # Protocol notes and methodology records
 ├── experiments/                     # Lightweight experiment logs
-├── Initial/                         # Early literature and topic analysis
 ├── results/                         # Small result tables only
 ├── scripts/                         # Data preparation and experiment scripts
-├── improved_proposal.md             # Detailed methodology proposal
-└── revised_fyp_proposal_form_cn.md  # Submission-oriented proposal draft
+│   └── initial_analysis/            # Pilot subset construction scripts
+└── README.md
 ```
 
 ## Data Policy
@@ -54,3 +53,6 @@ The pre-experiment should produce:
 
 This repository is for algorithmic benchmarking and FYP documentation only.
 Model outputs are not clinical diagnoses.
+
+The scripts under `scripts/initial_analysis/` may contain local path defaults.
+Update those paths before running them on another machine.

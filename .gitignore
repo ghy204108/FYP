@@ -19,6 +19,9 @@ data/raw/
 data/images/
 data/chexpert_manifest*.csv
 data/chexpert_label_summary*.csv
+label_distribution_all.csv
+pilot_subset*.csv
+sampling_quota.csv
 *.dcm
 *.nii
 *.nii.gz
